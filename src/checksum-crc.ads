@@ -1,6 +1,6 @@
 with Interfaces; use Interfaces;
 
-package CRC is
+package Checksum.CRC is
 
    type CRC_Array is array (Unsigned_8 range 0 .. 255) of Unsigned_32;
 
@@ -17,4 +17,4 @@ package CRC is
    function Compute_CRC (T : CRC_Array;
                          D : Byte_Array) return Unsigned_32;
 
-end CRC;
+end Checksum.CRC;

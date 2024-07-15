@@ -1,5 +1,5 @@
-name = "crc"
-description = "Cyclic Redundancy Check (CRC) implementation"
+name = "checksum"
+description = "Algorithms for error-checking"
 version = "0.1.0-dev"
 
 authors = ["Miko Elbrecht"]
@@ -7,4 +7,4 @@ maintainers = ["Miko Elbrecht <pmt.mailservice@gmail.com>"]
 maintainers-logins = ["meownium"]
 licenses = "GPL-3.0-or-later"
 website = "https://javart.zip"
-tags = ["crc", "crc32", "redundancy", "error", "checking", "error-checking"]
+tags = ["crc", "crc32", "adler32", "redundancy", "error", "checking", "error-checking"]
