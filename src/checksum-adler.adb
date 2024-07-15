@@ -14,7 +14,7 @@ package body Checksum.Adler is
          when 0 =>
             Adler := 1;
          when 1 =>
-            Adler := @ + Data (0);
+            Adler := @ + Unsigned_32 (Data (0));
             if Adler >= Base then
                Adler := @ - Base;
             end if;
@@ -27,7 +27,7 @@ package body Checksum.Adler is
             Adler := @ or Shift_Left (Sum_2, 16);
          when 2 .. 15 =>
             for Index in Data'Range loop
-               Adler := @ + Data (Index); --  ??
+               Adler := @ + Unsigned_32 (Data (Index)); --  ??
                Sum_2 := @ + Adler;
             end loop;
             

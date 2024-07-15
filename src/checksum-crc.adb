@@ -1,5 +1,3 @@
-pragma Ada_2022;
-
 package body Checksum.CRC is
 
    --  Adapted from https://www.w3.org/TR/png-3/#samplecrc
