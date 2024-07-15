@@ -1,6 +1,8 @@
 pragma Ada_2022;
 
-package body CRC is
+package body Checksum.CRC is
+
+   --  Adapted from https://www.w3.org/TR/png-3/#samplecrc
 
    procedure Compute_CRC_Table (T : out CRC_Array)
    is
@@ -18,9 +20,6 @@ package body CRC is
          T (N) := C;
       end loop;
    end Compute_CRC_Table;
-
-   Full_8  : constant Unsigned_32 := 16#FF#;
-   Full_32 : constant Unsigned_32 := 16#FFFFFFFF#;
 
    procedure Update_CRC (CRC : in out Unsigned_32;
                          T : CRC_Array;
@@ -43,4 +42,4 @@ package body CRC is
       return New_CRC xor Full_32;
    end Compute_CRC;
 
-end CRC;
+end Checksum.CRC;
