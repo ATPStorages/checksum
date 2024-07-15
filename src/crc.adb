@@ -6,16 +6,16 @@ package body CRC is
    is
       C : Unsigned_32;
    begin
-      for N in 1 .. 256 loop
+      for N in T'Range loop
          C := Unsigned_32 (N);
-         for K in 1 .. 8 loop
+         for K in 0 .. 7 loop
             if (C and 1) = 1 then
                C := 16#EDB88320# xor (Shift_Right (@, 1));
             else
                C := Shift_Right (@, 1);
             end if;
          end loop;
-         T (Unsigned_32 (N)) := C;
+         T (N) := C;
       end loop;
    end Compute_CRC_Table;
 
@@ -29,7 +29,7 @@ package body CRC is
    begin
       for Index in D'Range loop
          CRC :=
-           T ((@ xor Unsigned_32 (D (Index))) and Full_8)
+           T (Unsigned_8 ((@ xor Unsigned_32 (D (Index))) and Full_8))
            xor (Shift_Right (@, 8));
       end loop;
    end Update_CRC;

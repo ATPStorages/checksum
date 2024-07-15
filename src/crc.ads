@@ -2,7 +2,7 @@ with Interfaces; use Interfaces;
 
 package CRC is
 
-   type CRC_Array is array (Unsigned_32 range 1 .. 256) of Unsigned_32;
+   type CRC_Array is array (Unsigned_8 range 0 .. 255) of Unsigned_32;
 
    Table : CRC_Array;
 
