@@ -3,8 +3,8 @@ description = "Algorithms for error-checking"
 version = "0.1.0"
 
 authors = ["Miko Elbrecht"]
-maintainers = ["Miko Elbrecht <pmt.mailservice@gmail.com>"]
-maintainers-logins = ["meownium"]
+maintainers = ["Miko Elbrecht <tcgytsc@gmail.com>"]
+maintainers-logins = ["ATPStorages"]
 licenses = "GPL-3.0-or-later"
 website = "https://javart.zip"
 tags = ["crc", "crc32", "adler32", "redundancy", "error", "checking", "error-checking"]
